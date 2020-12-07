@@ -1,7 +1,7 @@
 pipeline{
   agent any
   environment{
-    ANSIBLE=credentials('ansadmin-server')
+    ANSIBLE=credentials('ansible-server')
   }
   stages{
     stage("building"){
