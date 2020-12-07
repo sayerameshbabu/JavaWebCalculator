@@ -1,9 +1,11 @@
 pipeline{
   agent any
   stages{
-    stage("testing"){
+    stage("building"){
       steps{
-        echo "testing"
+        sh 'mvn install'
+        sh 'mvn clean package'
+        sh 'pwd'
       }
     }
   }
