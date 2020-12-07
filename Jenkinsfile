@@ -14,7 +14,7 @@ pipeline{
     stage("transfering files"){
       steps{
         echo 'hi'
-        sh ' scp -i /home/ec2-user/.ssh/id_rsa target/*.war centos@172.31.55.146:/home/centos/  '
+        sh ' sudo scp -i /home/ec2-user/.ssh/id_rsa target/*.war centos@172.31.55.146:/home/centos/  '
       }
     }
   }
