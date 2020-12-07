@@ -14,7 +14,7 @@ pipeline{
     stage("transfering files"){
       steps{
         echo 'hi'
-        sh ' scp target/*.war ansadmin@172.31.55.146:/home/ansadmin/apache-tomcat-7.0.94/webapps/  '
+        sh ' scp -i /home/ec2-user/.ssh/id_rsa target/*.war centos@172.31.55.146:/home/centos/  '
       }
     }
   }
